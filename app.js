@@ -14,8 +14,10 @@
 
 let gameConsole = document.getElementById("mainContent");
 let playerInventory = document.getElementById("playerInventory");
+let inventoryCount = document.getElementById("inventoryCount");
 let userChoice = "";
 let gameState = "new";
+let itemCount = 0;
 
 function addInput()
 {
@@ -66,11 +68,19 @@ input.addEventListener("keyup", function(event){
 
 function addToInventory(userItem)
 {
-    console.log(userItem + " was added to Inventory");
-    let node = document.createElement("li");
-    let itemToAdd = document.createTextNode(userItem);
-    node.appendChild(itemToAdd);
-    playerInventory.appendChild(node);
+    if (itemCount < 15)
+    {
+        console.log(userItem + " was added to Inventory");
+        let node = document.createElement("li");
+        let itemToAdd = document.createTextNode(userItem);
+        node.appendChild(itemToAdd);
+        playerInventory.appendChild(node);
+        itemCount++;
+        inventoryCount.innerHTML = itemCount + " / 15";
+    }else
+    {
+        alert("Inventory Full");
+    }
 }
 
 function useItem(item){
