@@ -6,7 +6,7 @@ body {
 }
 #main {
     display: flex;
-    min-height: calc(100vh - 20vh);
+    height: 670px;
 }
 #main > article {
     flex: 1;
@@ -23,7 +23,7 @@ header, footer, article, nav, aside {
     padding: 2em;
 }
 header {
-    height: 10vh;
+    height: 5vh;
     border: 1px solid black;
     text-align: center;
 }
@@ -31,7 +31,7 @@ footer{
     text-align: center;
 }
 footer input {
-    width: 400px;
+    width: 500px;
     padding: 10px;
 }
 footer button {
@@ -45,7 +45,7 @@ footer button {
 }
 .mainGame{
     text-align: left;
-    height: 600px;
+    height: 50px;
     overflow: auto;
 }
 .mainGame li{
