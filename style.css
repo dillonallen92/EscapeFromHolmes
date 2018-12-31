@@ -6,7 +6,6 @@ body {
 }
 #main {
     display: flex;
-    height: 670px;
 }
 #main > article {
     flex: 1;
@@ -45,7 +44,7 @@ footer button {
 }
 .mainGame{
     text-align: left;
-    height: 50px;
+    height: 620px;
     overflow: auto;
 }
 .mainGame li{
