@@ -3,6 +3,7 @@
     Events that need to happen:
         - Add to console: add user input to the game console
         - Add to inventory: add items from game into inventory
+        - Remove items from Inventory
         - Game Intro onLoad: load initial story
         - StoryLine code: main story function
             - Subplot functions
@@ -18,6 +19,7 @@ let inventoryCount = document.getElementById("inventoryCount");
 let userChoice = "";
 let gameState = "new";
 let itemCount = 0;
+let itemArray = [];
 
 function addInput()
 {
@@ -87,11 +89,19 @@ function useItem(item){
     console.log("User chose to use " + item);
 }
 
+function removeItem(item){
+    console.log("Removed " + item + " from Inventory");
+}
+
+
 function checkItem(userInput){
     userInput = userInput.toLowerCase();
     if (userInput.includes("knife") === true){
-        addToInventory("Knife");
+        let item = "Knife";
+        itemArray.push(item);
+        addToInventory(item);
         console.log("Knife was added into the inventory");
+        console.log("ItemArray is: " + itemArray);
     }
 }
 
